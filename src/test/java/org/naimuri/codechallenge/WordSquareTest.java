@@ -2,7 +2,30 @@ package org.naimuri.codechallenge;
 
 import org.junit.jupiter.api.Test;
 
+import java.net.URL;
+import java.util.Arrays;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class WordSquareTest {
+
+    @Test
+    public void testSolve() {
+        String[] expected = new String[]{"abcd", "bcde", "cdef", "defg"};
+        WordList wordList = new WordList();
+        URL fileUrl = getClass().getClassLoader().getResource("testDictionary.txt");
+        wordList.load(fileUrl, 4);
+        WordSquare wordSquare = new WordSquare(4, "abcdbcdecdefdefg");
+        wordSquare.setWordList(wordList);
+        wordSquare.solve();
+
+        System.out.println(Arrays.toString(wordSquare.getSolutions().get(0)));
+        for(int i=0; i<wordSquare.getSolutions().get(0).length; i++) {
+            System.out.println("Compare " +wordSquare.getSolutions().get(0)[i]+" with "+expected[i]);
+            assert (wordSquare.getSolutions().get(0)[i].equals(expected[i]));
+        }
+    }
 
     @Test
     public void testWordStartsWithCharFilter() {

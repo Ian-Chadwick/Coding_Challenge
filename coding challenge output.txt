@@ -1,0 +1,62 @@
+Coding Challenge grids command line and output:
+java -jar CodingChallenge.jar 4 eeeeddoonnnsssrv
+Found 84 words using eeeeddoonnnsssrv
+Solve from 84 words, using allowed chars eeeeddoonnnsssrv
+*** Solution:
+rose
+oven
+send
+ends
+***
+
+java -jar CodingChallenge.jar 4 aaccdeeeemmnnnoo
+Found 74 words using aaccdeeeemmnnnoo
+Solve from 74 words, using allowed chars aaccdeeeemmnnnoo
+*** Solution:
+moan
+once
+acme
+need
+***
+
+java -jar CodingChallenge.jar 5 aaaeeeefhhmoonssrrrrttttw
+Found 653 words using aaaeeeefhhmoonssrrrrttttw
+Solve from 653 words, using allowed chars aaaeeeefhhmoonssrrrrttttw
+*** Solution:
+feast
+earth
+armer
+steno
+throw
+***
+*** Solution:
+feast
+earth
+armor
+stone
+threw
+***
+
+java -jar CodingChallenge.jar 5 aabbeeeeeeeehmosrrrruttvv
+Found 495 words using aabbeeeeeeeehmosrrrruttvv
+Solve from 495 words, using allowed chars aabbeeeeeeeehmosrrrruttvv
+*** Solution:
+heart
+ember
+above
+revue
+trees
+***
+
+java -jar CodingChallenge.jar 7 aaaaaaaaabbeeeeeeedddddggmmlloooonnssssrrrruvvyyy
+Found 2151 words using aaaaaaaaabbeeeeeeedddddggmmlloooonnssssrrrruvvyyy
+Solve from 2151 words, using allowed chars aaaaaaaaabbeeeeeeedddddggmmlloooonnssssrrrruvvyyy
+*** Solution:
+bravado
+renamed
+analogy
+valuers
+amoebas
+degrade
+odyssey
+***

@@ -32,8 +32,6 @@ public class WordSquareApp {
 //        URL fileUrl = wordSquare.getClass().getClassLoader().getResource(dictionaryStr);
 //        dictionary.load(fileUrl, size);
 
-//        InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream(dictionaryStr);
-//        dictionary.load(fileUrl, size);
         dictionary.load(dictionaryStr, size);
 
         wordSquare.setWordList(dictionary);

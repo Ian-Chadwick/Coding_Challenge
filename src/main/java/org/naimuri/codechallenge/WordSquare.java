@@ -1,6 +1,8 @@
 package org.naimuri.codechallenge;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Stream;
 
 public class WordSquare {
@@ -9,7 +11,7 @@ public class WordSquare {
     private String allowedCharacters;
     private int size = 0;
     private String[] solution;
-
+    private List<String[]> solutions = new ArrayList<String[]>();
     private long startTime = 0;
 
     WordSquare(){
@@ -18,6 +20,13 @@ public class WordSquare {
     WordSquare(int size, String chars){
         allowedCharacters = chars;
         this.size = size;
+    }
+
+    /**
+     * @return solutions list
+     */
+    public List<String[]> getSolutions(){
+        return solutions;
     }
 
     /**
@@ -32,8 +41,6 @@ public class WordSquare {
     }
 
     protected void solve(){
-        solution = new String[size];
-
         startTime = System.currentTimeMillis();
         solve(wordList, allowedCharacters);
     }
@@ -44,6 +51,7 @@ public class WordSquare {
         //find first word to try
         list.stream().forEach(firstword->{
 //            System.out.println("try first word "+firstword);
+            solution = new String[size];
             Arrays.fill(solution, null);
             solution[0]=firstword;
 
@@ -77,6 +85,7 @@ public class WordSquare {
                 if(rowList.size()==1){
                     rowList.stream().forEach(s->solution[row]=s);
                     printSolution();
+                    solutions.add(solution);
                     return;
                 }
             }
