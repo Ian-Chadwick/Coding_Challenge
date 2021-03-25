@@ -1,0 +1,14 @@
+word
+another
+mary
+had
+little
+lamb
+the
+quick
+brown
+fox
+abcd
+bcde
+cdef
+defg
